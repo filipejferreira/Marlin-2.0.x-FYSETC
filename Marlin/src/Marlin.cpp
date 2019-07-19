@@ -945,6 +945,9 @@ void setup() {
 
   // Load data from EEPROM if available (or use defaults)
   // This also updates variables in the planner, elsewhere
+  #if ENABLED(EEPROM_SETTINGS) && NONE(FLASH_EEPROM_EMULATION, SPI_EEPROM, I2C_EEPROM)
+    card.initsd();
+  #endif
   settings.first_load();
 
   #if ENABLED(TOUCH_BUTTONS)

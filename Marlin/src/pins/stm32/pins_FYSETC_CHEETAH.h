@@ -101,7 +101,7 @@
 //
 #if HAS_SPI_LCD
 
-  #define BEEPER_PIN       PC9
+  //#define BEEPER_PIN       PC9
 
   #if HAS_GRAPHICAL_LCD
     #define DOGLCD_A0      PB14
